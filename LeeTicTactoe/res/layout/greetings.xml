@@ -6,22 +6,22 @@
     android:background="@drawable/ezra"
     android:orientation="vertical" 
     android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
-
+
     <ImageView
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/ezratitle" />
-
+
     <ImageView
         android:id="@+id/quit"
         android:layout_width="wrap_content"
         android:layout_height="60dip"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="60dp"
+        android:layout_marginBottom="40dp"
         android:background="@drawable/quit1" />
 
     <ImageView
@@ -30,7 +30,7 @@
         android:layout_height="60dip"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="700dp"
-        android:background="@drawable/options1" />
+        android:background="@drawable/options2" />
 
     <ImageView
         android:id="@+id/iv2player"
@@ -38,7 +38,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="580dp"
-        android:src="@drawable/player2play" />
+        android:src="@drawable/player3play" />
 
     <ImageView
         android:id="@+id/new_game"

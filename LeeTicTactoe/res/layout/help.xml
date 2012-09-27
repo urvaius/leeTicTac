@@ -10,8 +10,8 @@ android:layout_height="wrap_content"
 android:textSize="20dip"
 android:scrollbars="vertical"
 android:text=" GAME  \n The aim of the game is to get,\n horizontal, vertical or the\n diagonal cells marked with the\n same symbol.\n\n
-OPTIONS \n To access options, during\n game, press the MENU button\n of your phone.\n\n
-Application Developed By:\n Rahul and Shilpa\n User Interface Design: Giri\n" />
+OPTIONS \n To access options, during\n game, press the MENU button\n of your Kindle.\n\n
+Application Developed By:\n Dave Arneson\n Code Some Source code from tictactoe4android under GNU GPL v3\n" />
 	
 </RelativeLayout>
 

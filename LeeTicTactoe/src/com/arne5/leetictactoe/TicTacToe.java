@@ -188,8 +188,8 @@ public class TicTacToe extends Activity {
      * Creates an Alert Dialog for Options. 
      * */
     public void options_menu() {
-    	final CharSequence[] options_items = {"Change Skin", "Choose Symbol", "Game Mode" , "Player Name", "Help", "Go Back"};
-    	
+    	//final CharSequence[] options_items = {"Change Skin", "Choose Symbol", "Game Mode" , "Player Name", "Help", "Go Back"};
+    	final CharSequence[] options_items = { "Help", "Go Back", "Sound"};
     	AlertDialog.Builder options_builder = new AlertDialog.Builder(this);
     	options_builder.setTitle("Options");
     	options_builder.setItems(options_items, new DialogInterface.OnClickListener() {
@@ -203,7 +203,10 @@ public class TicTacToe extends Activity {
     			else if(options_items[item] == "Player Name")
     				showDialog(NAME_DIALOG_ID);
     			else if (options_items[item] == "Help")
+    			
     				showDialog(HELP_DIALOG_ID);
+    			else if (options_items[item]== "Sound")
+    				return;
     			else if (options_items[item] == "Go Back")
     				return;
     		}	
