@@ -322,7 +322,7 @@ public class TicTacToe extends Activity {
     	else if (skin == 0) {
     		skin_dot = R.drawable.default_dot;
     		skin_cross = R.drawable.default_cross;
-    		skin_layout = R.layout.main;
+    		skin_layout = R.layout.main2;
     	}
     	else if (skin == 4) {
     		skin_dot = R.drawable.dot1;
