@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -37,6 +38,14 @@ public class TicTacToe extends Activity {
         iv_2player.setOnClickListener(welcome_listener);
         //iv_help.setOnClickListener(welcome_listener);
         iv_quit.setOnClickListener(welcome_listener);
+        
+        
+    }
+    @Override
+    protected void onPause(){
+    	super.onPause();
+    	//song stop add here
+    	finish();
     }
     
     /** 
@@ -138,6 +147,7 @@ public class TicTacToe extends Activity {
         menu.add(0, MENU_OPTIONS, 0, "Options");
         menu.add(0, MENU_QUIT, 0, "Quit");
         menu.add(0,MENU_2PLAY,0, "2 Player Game");
+        menu.add(0,MENU_MAIN_SCREEN,0,"Main Screen");
         return true;
     }
    
@@ -155,7 +165,12 @@ public class TicTacToe extends Activity {
 	     }
     	else if(item.getItemId()==3)//start 2player game
     		showDialog(TWO_PLAYER_ID);
-    	
+    	else if(item.getItemId()==4){
+    		Intent intent = getIntent();
+    		finish();
+    		startActivity(intent);
+    		
+    	}
     		
     	
     	else //user wishes to quit the game
@@ -376,6 +391,7 @@ public class TicTacToe extends Activity {
 	int MENU_2PLAY =3;
     int MENU_OPTIONS = 1;
     int MENU_QUIT = 2;
+    int MENU_MAIN_SCREEN = 4;
     
     // dialog IDs
     final int NAME_DIALOG_ID = 1;
