@@ -5,6 +5,7 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -589,7 +590,7 @@ public class TicTacToe extends Activity {
      */
     public void set_score(int player_number) {
     	TextView tv = (TextView) findViewById(R.id.scoreboard);
-    	
+    	tv.setTextColor(Color.GREEN);
     	if (player_number == 1)
     		score_player_1 += 1;
     	else if (player_number == 2)
