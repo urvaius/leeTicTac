@@ -145,9 +145,10 @@ public class TicTacToe extends Activity {
      * */
     public boolean onCreateOptionsMenu(Menu menu) {
         menu.add(0, MENU_NEW_GAME, 0, "1 Player Game");
+        menu.add(0,MENU_2PLAY,0, "2 Player Game");
         menu.add(0, MENU_OPTIONS, 0, "Options");
         menu.add(0, MENU_QUIT, 0, "Quit");
-        menu.add(0,MENU_2PLAY,0, "2 Player Game");
+        
         menu.add(0,MENU_MAIN_SCREEN,0,"Main Screen");
         return true;
     }
@@ -159,14 +160,14 @@ public class TicTacToe extends Activity {
     	if(item.getItemId()== 0)//user wants to start a new game
     	        showDialog(NAME_DIALOG_ID);
     	
-    	else if(item.getItemId() == 1)//user wishes to see the other options available in the game
+    	else if(item.getItemId() == 2)//user wishes to see the other options available in the game
     	{	
     		// starts options menu.
     		options_menu();
 	     }
-    	else if(item.getItemId()==3)//start 2player game
+    	else if(item.getItemId()==1)//start 2player game
     		showDialog(TWO_PLAYER_ID);
-    	else if(item.getItemId()==4){
+    	else if(item.getItemId()==3){
     		Intent intent = getIntent();
     		finish();
     		startActivity(intent);
@@ -389,10 +390,10 @@ public class TicTacToe extends Activity {
 	
 	// menu item numbers.
 	int MENU_NEW_GAME = 0;
-	int MENU_2PLAY =3;
-    int MENU_OPTIONS = 1;
-    int MENU_QUIT = 2;
-    int MENU_MAIN_SCREEN = 4;
+	int MENU_2PLAY =1;
+    int MENU_OPTIONS = 2;
+    int MENU_QUIT = 4;
+    int MENU_MAIN_SCREEN = 3;
     
     // dialog IDs
     final int NAME_DIALOG_ID = 1;
