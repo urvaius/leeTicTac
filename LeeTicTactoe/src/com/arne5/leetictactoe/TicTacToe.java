@@ -1,5 +1,7 @@
 package com.arne5.leetictactoe;
 
+import com.arne5.leetictactoe.R.raw;
+
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -521,6 +523,10 @@ public class TicTacToe extends Activity {
     	CharSequence pos_str = "";				// position as a string.
     	int pos = 0;
     	boolean result = false;
+    	SoundMangler dsoundMangler = new SoundMangler();
+    	dsoundMangler.soundInit(getBaseContext());
+    	dsoundMangler.addSound(1, raw.cat2);
+    	
   
     	pos_str = (CharSequence) ib.getTag();	// get the position from the tag.
     	pos = (int) pos_str.charAt(0) - 48;		// char to integer conversion.
@@ -552,26 +558,29 @@ public class TicTacToe extends Activity {
     		if (player == 1) {
     			set_score(1);
     			if (game_mode == 0) {
-    				show_result("Congrats. " + player_name_1 + " wins !!");
+    				show_result("Sweet " + player_name_1 + " wins !!");
     			}
     			else {
-    				show_result("Computer Wins !!");
+    				show_result("Kindle Fire Wins !!");
     			}
     		}
     		else {
     			set_score(2);
     			if (game_mode == 0) {	// human vs human  
-    				show_result("Congrats. " + player_name_2 + " wins !!");
+    				show_result("Sweet " + player_name_2 + " wins !!");
     			}
     			else {	// human vs computer
-    				show_result("Congrats. You have won !!");
+    				show_result("Sweet You have won !!");
     			}
     		}
     		return;
     	
     	}
     	else if ((result == false) && arr_isFull()) {
-    		show_result("    Game Draw !    ");				// leave the space, or else dialog becomes cramped.
+    		show_result("    Cats Game !    ");	
+    		dsoundMangler.playSound(1);
+    		
+    		// leave the space, or else dialog becomes cramped.
     		return;
     	}
     	
