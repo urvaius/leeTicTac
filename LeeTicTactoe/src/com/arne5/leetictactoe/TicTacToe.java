@@ -61,9 +61,9 @@ public class TicTacToe extends Activity {
     		else if(iv.getId() == R.id.options) {
     			options_menu();
     		}
-    		else if (iv.getId() == R.id.help) {
-    			showDialog(HELP_DIALOG_ID);
-    		}
+    		//else if (iv.getId() == R.id.help) {
+    		//	showDialog(HELP_DIALOG_ID);
+    	//	}
     		else if (iv.getId()== R.id.iv2player){
     		    	showDialog(TWO_PLAYER_ID);
     		}
@@ -325,29 +325,29 @@ public class TicTacToe extends Activity {
      * */
     public void change_skin() {    		
     	if (skin == 1) {
-    		skin_dot = R.drawable.gal_dot;
-    		skin_cross = R.drawable.gal_cross;
-    		skin_layout = R.layout.gal_layout;
+    		skin_dot = R.drawable.dot1;
+    		skin_cross = R.drawable.cross1;
+    		skin_layout = R.layout.gamescreen;
     	}
     	else if (skin == 2) {
     		skin_dot = R.drawable.ninja_dot;
     		skin_cross = R.drawable.ninja_cross;
-    		skin_layout = R.layout.main2;
+    		skin_layout = R.layout.gamescreen;
     	}
     	else if (skin == 3) {
     		skin_dot = R.drawable.red_dot;
     		skin_cross = R.drawable.red_cross;
-    		skin_layout = R.layout.main2;
+    		skin_layout = R.layout.gamescreen;
     	}
     	else if (skin == 0) {
     		skin_dot = R.drawable.default_dot;
     		skin_cross = R.drawable.default_cross;
-    		skin_layout = R.layout.main2;
+    		skin_layout = R.layout.gamescreen;
     	}
     	else if (skin == 4) {
     		skin_dot = R.drawable.dot1;
     		skin_cross = R.drawable.cross1;
-    		skin_layout = R.layout.main2;
+    		skin_layout = R.layout.gamescreen;
     	}
     	
     	showDialog(NAME_DIALOG_ID);
@@ -377,7 +377,7 @@ public class TicTacToe extends Activity {
 	int skin_dot = R.drawable.dot1;
 	
 	//int skin_layout = R.layout.main;
-	int skin_layout = R.layout.main2;// default values.
+	int skin_layout = R.layout.gamescreen;// default values.
 	int game_bg = 2;
 	
 	// player names initialized with default values.
@@ -455,7 +455,7 @@ public class TicTacToe extends Activity {
     	
     	// reset the game view. (this must be the first line in this function)
 		//setContentView (skin_layout);
-		  setContentView (R.layout.main2);
+		  setContentView (R.layout.gamescreen);
 		
     	final ImageButton b3 = (ImageButton) findViewById(R.id.b3);
         final ImageButton b2 = (ImageButton) findViewById(R.id.b2);
