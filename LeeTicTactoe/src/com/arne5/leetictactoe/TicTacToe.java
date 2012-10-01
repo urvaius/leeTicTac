@@ -27,7 +27,7 @@ public class TicTacToe extends Activity {
 	requestWindowFeature(Window.FEATURE_NO_TITLE);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.greetings);
-        
+        //make sure good
         final ImageView iv_new_game = (ImageView) findViewById(R.id.new_game);
         final ImageView iv_options = (ImageView) findViewById(R.id.options);
         //final ImageView iv_help = (ImageView) findViewById(R.id.help);
