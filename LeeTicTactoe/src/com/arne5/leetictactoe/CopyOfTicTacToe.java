@@ -327,16 +327,16 @@ public class CopyOfTicTacToe extends Activity {
     		skin_cross = R.drawable.gal_cross;
     		skin_layout = R.layout.gal_layout;
     	}
-    	else if (skin == 2) {
-    		skin_dot = R.drawable.ninja_dot;
-    		skin_cross = R.drawable.ninja_cross;
-    		skin_layout = R.layout.ninja_layout;
-    	}
-    	else if (skin == 3) {
-    		skin_dot = R.drawable.red_dot;
-    		skin_cross = R.drawable.red_cross;
-    		skin_layout = R.layout.red_layout;
-    	}
+    //else if (skin == 2) {
+    	//	skin_dot = R.drawable.ninja_dot;
+    	//	skin_cross = R.drawable.ninja_cross;
+    	//	skin_layout = R.layout.ninja_layout;
+    	//}
+    	//else if (skin == 3) {
+    //		skin_dot = R.drawable.red_dot;
+    	//	skin_cross = R.drawable.red_cross;
+    	//	skin_layout = R.layout.red_layout;
+    	//}
     	else if (skin == 0) {
     		skin_dot = R.drawable.default_dot;
     		skin_cross = R.drawable.default_cross;

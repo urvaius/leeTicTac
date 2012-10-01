@@ -332,12 +332,12 @@ public class TicTacToe extends Activity {
     	else if (skin == 2) {
     		skin_dot = R.drawable.ninja_dot;
     		skin_cross = R.drawable.ninja_cross;
-    		skin_layout = R.layout.ninja_layout;
+    		skin_layout = R.layout.main2;
     	}
     	else if (skin == 3) {
     		skin_dot = R.drawable.red_dot;
     		skin_cross = R.drawable.red_cross;
-    		skin_layout = R.layout.red_layout;
+    		skin_layout = R.layout.main2;
     	}
     	else if (skin == 0) {
     		skin_dot = R.drawable.default_dot;
