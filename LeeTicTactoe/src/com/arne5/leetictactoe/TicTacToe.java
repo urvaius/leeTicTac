@@ -5,10 +5,16 @@ import com.arne5.leetictactoe.R.raw;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.graphics.Color;
+import android.graphics.Point;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -18,11 +24,15 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.PopupWindow;
 import android.widget.TextView;
 import android.widget.Toast;
+import com.arne5.leetictactoe.*;
 //working state
 
 public class TicTacToe extends Activity {
+	Point p;
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -448,6 +458,26 @@ public class TicTacToe extends Activity {
     	return true;
     }
     
+    // ezra cat screen for cats game
+   
+    	
+    	
+    	//do a close on the button
+    	
+    	
+    	
+    	
+    	
+    	//final ImageView catView;
+    	//catView = (ImageView) findViewById(R.id.catGame);
+    	//catView.setImageResource(R.drawable.ezracat);
+    	
+    	
+    	
+    	
+    	
+    
+    
     /**
      * Starting point for the Game. Includes calling of Computer Game,
      * result checking and the skin setting.
@@ -515,6 +545,25 @@ public class TicTacToe extends Activity {
 			CompGame();
     }
     
+ private void catsGame(final Activity context, Point p){
+    	
+    	int popupWidth = 200;
+    	int popupHeight = 150;
+    	//inflate xml
+    	LinearLayout viewGroup = (LinearLayout)context.findViewById(R.id.catGame);
+    	LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+    	View layout = layoutInflater.inflate(R.layout.catsgame, viewGroup);
+    	//create popupwindow
+    	final PopupWindow popup = new PopupWindow(context);
+    	popup.setContentView(layout);
+    	popup.setWidth(popupWidth);
+    	popup.setHeight(popupHeight);
+    	popup.setFocusable(true);
+    	// offsets if want
+    	popup.setBackgroundDrawable(new BitmapDrawable());
+    	
+    	popup.showAtLocation(layout, Gravity.NO_GRAVITY, p.x, p.y);
+ }
     /**
      * Checks for the result and Selects the next player.
      * @param ib : Image button that was clicked by user / computer.
@@ -526,6 +575,8 @@ public class TicTacToe extends Activity {
     	SoundMangler dsoundMangler = new SoundMangler();
     	dsoundMangler.soundInit(getBaseContext());
     	dsoundMangler.addSound(1, raw.cat2);
+    	
+    	
     	
   
     	pos_str = (CharSequence) ib.getTag();	// get the position from the tag.
@@ -578,8 +629,13 @@ public class TicTacToe extends Activity {
     	}
     	else if ((result == false) && arr_isFull()) {
     		show_result("    Cats Game !    ");	
-    		dsoundMangler.playSound(1);
     		
+    		//invoke cats game popup for pictue of ezra
+    		
+    		
+    		
+    		dsoundMangler.playSound(1);
+    		//catsGame(TicTacToe.this, p);
     		// leave the space, or else dialog becomes cramped.
     		return;
     	}

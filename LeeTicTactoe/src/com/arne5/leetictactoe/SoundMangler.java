@@ -11,7 +11,7 @@ public class SoundMangler {
 
 	
 	private SoundPool dSoundPool;
-	private HashMap dSoundPoolMap;
+	private HashMap<Integer, Integer> dSoundPoolMap;
 	private AudioManager dAudioManager;
 	private Context dContext;
 	
@@ -19,7 +19,7 @@ public class SoundMangler {
 	public void soundInit(Context c){
 		dContext = c;
 		dSoundPool = new SoundPool(4, AudioManager.STREAM_MUSIC,0);
-		dSoundPoolMap = new HashMap();
+		dSoundPoolMap = new HashMap<Integer, Integer>();
 		dAudioManager = (AudioManager)dContext.getSystemService(Context.AUDIO_SERVICE);
 		
 	}
