@@ -628,13 +628,14 @@ public class TicTacToe extends Activity {
     	
     	}
     	else if ((result == false) && arr_isFull()) {
+    		dsoundMangler.playSound(1);
     		show_result("    Cats Game !    ");	
     		
     		//invoke cats game popup for pictue of ezra
     		
     		
     		
-    		dsoundMangler.playSound(1);
+    		
     		//catsGame(TicTacToe.this, p);
     		// leave the space, or else dialog becomes cramped.
     		return;
