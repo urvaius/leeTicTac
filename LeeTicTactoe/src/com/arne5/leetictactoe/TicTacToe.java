@@ -628,9 +628,9 @@ public class TicTacToe extends Activity {
     	
     	}
     	else if ((result == false) && arr_isFull()) {
-    		dsoundMangler.playSound(1);
-    		show_result("    Cats Game !    ");	
     		
+    		show_result("    Cats Game !    ");
+            dsoundMangler.playSound(1);
     		//invoke cats game popup for pictue of ezra
     		
     		
@@ -649,12 +649,7 @@ public class TicTacToe extends Activity {
     	else { } // continue game.
     }
     
-    /**
-     *  sets the score board.
-     *
-     * @param Pass the player number, so that the score of the
-     * corresponding player can be increased.
-     */
+
     public void set_score(int player_number) {
     	TextView tv = (TextView) findViewById(R.id.scoreboard);
     	tv.setTextColor(Color.GREEN);
